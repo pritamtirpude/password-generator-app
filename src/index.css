@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "JetBrains Mono", monospace;
+  background-color: hsl(248, 15%, 11%);
+  overflow: hidden;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: hsl(248, 15%, 11%);
+  background-image: linear-gradient(hsl(127, 100%, 82%), hsl(127, 100%, 82%));
+  height: 8px;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  background-color: hsl(252, 11%, 91%);
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  z-index: 60;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  border: 2px solid hsl(127, 100%, 82%);
+  background-color: hsl(248, 15%, 11%);
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  background-color: hsl(252, 11%, 91%);
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  background-color: hsl(252, 11%, 91%);
+  cursor: pointer;
+}
+
+/* input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background-color: hsl(248, 15%, 11%);
+  height: 8px;
+} */
+
+/* input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background-color: hsl(248, 15%, 11%);
+  height: 8px;
+} */
